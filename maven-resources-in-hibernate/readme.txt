@@ -30,7 +30,7 @@ java -jar target/itis-maven-filtering.jar
 Note: it will work only for "dev" profile as you didn't configure your MySQL for "prod" - this way you will check that
 different db url/user/pswd was used and Maven filtering really works
 
-2. There one test that tests UserRepository: it creates one user (always the same) and checks user count has been increased
+2. There is one test that tests UserRepository: it creates one user (always the same) and checks user count has been increased
 
 This should work:
 mvn test -Pdev
@@ -43,7 +43,7 @@ mvn test -Pprod
 
 3. Simply run ExampleMain with exec:java Maven plugin
 
-The program will add ["James Bond",age=13] user and display current count.
+The program will add ["James Bond",age=25] user and display current count.
 This count will increase on each run: this is because we use "hibernate.hbm2ddl.auto"=update.
 And it differs from running tests where we use "hibernate.hbm2ddl.auto"=create-drop
 
